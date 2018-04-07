@@ -1,0 +1,68 @@
+@font-face {
+    font-family: fantFont;
+    src: url("image/dpcomic.ttf");
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+    animation: color-me-in 4s infinite;
+    overflow: hidden;
+}
+
+audio {
+    position: absolute;
+    opacity: 0;
+}
+
+@keyframes color-me-in {
+    0% {
+        background: orange;
+    }
+    100% {
+        background: black;
+    }
+}
+#clipped-title1 {
+    background: url(image/buttons.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#clipped-title1 h1 {
+    font-size: 200px;
+    font-family: fantFont, fantasy;
+    text-align: center;
+    -webkit-transition: text-shadow 1s ease;
+    text-shadow: 0 0 1px rgba(0,0,0,.1);
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    font-family: fantFont, fantasy;
+    color: red;
+    font-size: 8em;
+    margin-left: 50px;
+}
+
+
+footer {
+    position:absolute;
+    min-width: 10%;
+    margin-top: 17em;
+    padding: 1rem;
+}
+footer p {
+    font-family: fantFont, fantasy;
+    margin: 0.5rem;
+    text-align: right;
+    font-size: 2rem;
+    color: darkred;
+}

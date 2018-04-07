@@ -1,0 +1,110 @@
+@font-face {
+    font-family: fantFont;
+    src: url("image/dpcomic.ttf");
+}
+html, body {
+    height: 100%;
+    margin:0;
+    color: white;
+    background-color: black;
+    overflow: hidden;
+}
+audio {
+    position: absolute;
+    opacity: 0;
+}
+
+#container-arena {
+    min-height: 100%;
+    background-image: url("http://49.media.tumblr.com/da0f0968e44d80ed5e612c457fdb3e74/tumblr_ns1xakCIxs1u4ebpio1_1280.gif");
+    background-size: cover;
+    height: 50rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.container-hero {
+    text-align: center;
+    display: inline-block;
+    background-image: url("image/paper.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 8rem 1rem 2rem 25px;
+    color: black;
+    width: 300px;
+    padding-bottom: 20px;
+    border: 6px outset #463432;
+}
+
+.card.selected-1 {
+    border: 10px outset #18461e;
+}
+
+.card.selected-2 {
+    border: 10px outset #460b0a;
+}
+
+.card.winner {
+    position: absolute;
+    margin-left: 28%;
+    transform: scale(1.5);
+    transition: all 2s;
+}
+
+.covered > * {
+    opacity: 0;
+}
+
+.hero-img {
+    width: 210px;
+    height: 250px;
+    border: 6px groove #464646;
+    margin-bottom: 25px;
+}
+
+.stats {
+    width: 250px;
+    display: inline-block;
+    margin: auto;
+    border: 5px outset #5f5f5f;
+}
+.stat {
+    display: inline-block;
+    width: 80px;
+}
+
+.stat img {
+    margin-right: 10px;
+}
+
+.buttons {
+    font-family: fantFont, fantasy;
+    position: absolute;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-image: url("https://img00.deviantart.net/f905/i/2014/037/0/5/burning_cracked_yogurt_wallpaper_1_by_black_b_o_x-d72j2o4.jpg");
+    background-size: cover;
+    border-color: #5f5f5f;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.fight{
+    margin-left: 20px;
+}
+.replay {
+    margin-left: 107rem;
+    margin-top: -100px;
+}
+
+.buttons:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(5px);
+}

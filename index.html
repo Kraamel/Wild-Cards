@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio src="music/introMusic.mp3" controls autoplay loop>></audio>
+
+<section id="Arena">
+    <audio id="sound1" src="music/fightVoice.wav" preload="auto"></audio>
+    <button class="buttons fight" onclick="fight()" onmousedown="document.getElementById('sound1').play()">Fight</button>
+    <div id="container-arena">
+    </div>
+    <audio id="sound2" src="music/basic.wav" preload="auto"></audio>
+    <button class="buttons replay" onclick="replay()" onmousedown="document.getElementById('sound2').play()">Replay</button>
+</section>
+
+<script src="./fight.js"></script>
+</body>
+</html>
