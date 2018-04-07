@@ -27,6 +27,16 @@ audio {
         background: black;
     }
 }
+
+@keyframes bigger-me {
+    0% {
+        font-size: 8em;
+    }
+    100% {
+        font-size: 9em;
+    }
+}
+
 #clipped-title1 {
     background: url(image/buttons.jpg) no-repeat center center;
     background-size: cover;
@@ -45,13 +55,21 @@ audio {
     padding: 0;
 }
 
+#container-intro {
+    text-align: center;
+}
+
 .button {
     font-family: fantFont, fantasy;
     color: red;
     font-size: 8em;
-    margin-left: 50px;
 }
 
+.button:hover{
+    font-size: 9em;
+    animation: bigger-me 0.39s infinite;
+    animation-direction: alternate;
+}
 
 footer {
     position:absolute;

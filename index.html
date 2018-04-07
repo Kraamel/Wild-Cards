@@ -6,17 +6,34 @@
     <link rel="stylesheet" href="introStyle.css">
 </head>
 <body>
-<audio src="music/Thunder.mp3" controls autoplay loop>></audio>
 <section id="container-intro">
     <div id="clipped-title1">
         <h1>Wild card</h1>
     </div>
-    <a href="fight.html" class="button"> PRESS START</a>
+    <a href="fight.html" onmouseover="heartbeat()" onmouseleave="heartbeatStop()" class="button">PRESS START</a>
 </section>
 
 <footer>
     <p>&copy;2018 Wild Card</p>
 </footer>
+
+<script>
+
+    const thunder = new Audio('music/Thunder.mp3');
+    thunder.volume = 0.2;
+    thunder.play();
+
+    const audio = new Audio('music/heartbeat-03.mp3');
+    const heartbeat = () => {
+        audio.play();
+        thunder.loop = false;
+    }
+    const heartbeatStop = () => {
+        audio.pause();
+        audio.currentTime = 0;
+        thunder.play();
+    }
+</script>
 
 </body>
 </html>
