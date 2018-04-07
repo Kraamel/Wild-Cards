@@ -1,6 +1,10 @@
 let heroes = [];
 let deck = {};
 
+const playSound = (file) => {
+    const audio = new Audio('music/'+file);
+    audio.play();
+}
 
 // on commence par fetch l'API en all.json
 const getHeroes = () => {
@@ -46,6 +50,7 @@ const showDeck = count => {
 
 // ensuite les joueurs devront sélectionner une carte, il faut pouvoir détecter quelle carte a été choisi, de plus seule 2 cartes devront être sélectionné. d'où l'utilité du togge . on doit aussi rajouter un remove si les joueurs choisisent plus de 2 cartes. Ils devront donc recommencer et choisir 2 cartes
 const selectCard = element => {
+    playSound('basic.wav')
     const selectedCards = document.querySelectorAll('.selected')
     element.classList.toggle('selected')
     element.classList.toggle('selected-' + (selectedCards.length + 1))
@@ -102,8 +107,7 @@ const getWinner = heroes => {
         }
     })
 
-    const audio = new Audio('music/youWin.mp3');
-    audio.play();
+    playSound('youWin.mp3')
 
     return winner.id
 }

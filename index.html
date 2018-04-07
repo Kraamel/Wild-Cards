@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Game intro</title>
+    <link rel="stylesheet" href="introStyle.css">
 </head>
 <body>
-<audio src="music/introMusic.mp3" controls autoplay loop>></audio>
-
-<section id="Arena">
-    <audio id="sound1" src="music/fightVoice.wav" preload="auto"></audio>
-    <button class="buttons fight" onclick="fight()" onmousedown="document.getElementById('sound1').play()">Fight</button>
-    <div id="container-arena">
+<audio src="music/Thunder.mp3" controls autoplay loop>></audio>
+<section id="container-intro">
+    <div id="clipped-title1">
+        <h1>Wild card</h1>
     </div>
-    <audio id="sound2" src="music/basic.wav" preload="auto"></audio>
-    <button class="buttons replay" onclick="replay()" onmousedown="document.getElementById('sound2').play()">Replay</button>
+    <a href="fight.html" class="button"> PRESS START</a>
 </section>
 
-<script src="./fight.js"></script>
+<footer>
+    <p>&copy;2018 Wild Card</p>
+</footer>
+
 </body>
 </html>
